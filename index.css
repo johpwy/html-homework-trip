@@ -7,14 +7,14 @@ body {
 a {
   text-decoration: none;
 }
-/*  */
+/* ============================= */
 .navBar {
   background-color: #fff;
   border-bottom: 1px solid #cbcaca;
   display: flex;
   justify-content: space-around;
-  /* align-content: center; */
-  max-width: 100%;
+  align-self: center;
+  width: 100%;
   height: 60px;
 }
 .logo {
@@ -44,9 +44,79 @@ a {
   font-weight: 500;
   padding: 0 15px;
 }
-/*  */
+/* ======= */
 .banner {
   width: 100%;
   height: 310px;
   background-color: #514a4a;
+  display: block;
+  align-content: center;
+}
+.banner img {
+  width: 100%;
+  height: 310px;
+  background-size: cover;
+}
+
+.banner .btn {
+  display: flex;
+  justify-content: space-between;
+}
+
+.left,
+.right {
+  width: 40px;
+  height: 40px;
+  border: none;
+  border-radius: 99%;
+  border: rgba(255, 255, 255, 0.4);
+}
+.left::before {
+  content: "＜";
+  font-size: 1rem;
+}
+.right::before {
+  content: "＞";
+  font-size: 1rem;
+}
+/* ==================== */
+.card {
+  display: grid;
+  background-color: #fff;
+  max-width: 75%;
+  margin: 0 auto;
+  height: 200px;
+  grid-template-columns: 1fr 2fr 2fr 2fr;
+  grid-template-areas:
+    "btnT btnT btnT btnT"
+    "flight city date people"
+    "btn btn btn btn";
+  gap: 10px;
+}
+
+.cardTpoBtn {
+  grid-area: btnT;
+}
+.flight {
+  grid-area: flight;
+}
+.city {
+  grid-area: city;
+}
+.date {
+  grid-area: date;
+}
+.people {
+  grid-area: people;
+}
+.caedBtn {
+  grid-area: btn;
+}
+
+/* ====================== */
+.qpBtn {
+  display: flex;
+}
+.qaBtn a {
+  color: #000;
 }

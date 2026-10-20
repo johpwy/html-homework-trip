@@ -6,6 +6,10 @@
     <title>Document</title>
     <link rel="stylesheet" href="reset.css" />
     <link rel="stylesheet" href="index.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/gh/iconoir-icons/iconoir@main/css/iconoir.css"
+    />
   </head>
   <body>
     <div class="navBar">
@@ -24,48 +28,51 @@
       </nav>
     </div>
     <div class="banner">
-      <img src="" alt="" />
-      <button class="right"></button><button class="left"></button>
+      <img src="https://picsum.photos/1024/300" alt="tripgogogo" />
+      <div class="btn">
+        <button class="left"></button>
+        <button class="right"></button>
+      </div>
     </div>
     <div class="card">
-      <nav>
+      <div class="cardTopBtn">
         <a href="#">航班</a>
         <a href="#">樂虎卡</a>
         <a href="#">虎加酒</a>
         <a href="#">虎里轉</a>
-      </nav>
-      <form action="#" method="get">
-        <select name="flight">
-          <option value="rt">來回</option>
-          <option value="ow">單程</option>
-          <option value="oj">不同點</option>
-        </select>
-        <div>
-          <label for="star">出發地</label>
-          <input type="text" id="star" />
-          <label for="end">目的地</label>
-          <input type="text" id="end" />
-        </div>
-        <div>
-          <label for="starDate">去程出發日期</label>
-          <input type="date" id="starDate" />
-          <label for="endDate">回程出發日期</label>
-          <input type="date" id="endDate" />
-        </div>
+      </div>
+      <select class="flight" name="flight" id="flight">
+        <option value="rt">來回</option>
+        <option value="ow">單程</option>
+        <option value="oj">不同點</option>
+      </select>
+      <div class="city">
+        <label for="star">出發地</label>
+        <input type="text" id="star" name="star" />
+        <label for="end">目的地</label>
+        <input type="text" id="end" name="end" />
+      </div>
+      <div class="date">
+        <label for="starDate">去程出發日期</label>
+        <input type="date" id="starDate" name="starDate" />
+        <label for="endDate">回程出發日期</label>
+        <input type="date" id="endDate" name="endDate" />
+      </div>
+      <div class="people">
         <label for="people">旅客人數</label>
         <select name="people" id="people"></select>
-      </form>
-      <div>
+      </div>
+      <div class="cardBtn">
         <button>加入促銷代碼</button>
         <button>搜尋</button>
       </div>
     </div>
-    <div>
-      <a href="#">管理訂單</a>
-      <a href="#">自動報到</a>
-      <a href="#">航班動態</a>
-      <a href="#">免稅品購買</a>
-      <a href="#">常見問題</a>
+    <div class="qaBtn">
+      <a href="#" class="iconoir-page">管理訂單</a>
+      <a href="#" class="iconoir-airplane">自動報到</a>
+      <a href="#" class="iconoir-calendar">航班動態</a>
+      <a href="#" class="iconoir-shop-four-tiles-window">免稅品購買</a>
+      <a href="#" class="iconoir-help-circle">常見問題</a>
     </div>
   </body>
 </html>
