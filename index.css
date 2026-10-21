@@ -6,43 +6,70 @@ body {
 }
 a {
   text-decoration: none;
+  color: #000;
 }
 /* ============================= */
-.navBar {
+header {
   background-color: #fff;
   border-bottom: 1px solid #cbcaca;
   display: flex;
   justify-content: space-around;
-  align-self: center;
+  align-items: center;
+  position: relative;
+  z-index: 10;
   width: 100%;
   height: 60px;
+}
+.nav-left {
+  /* display: flex; */
 }
 .logo {
   background-color: #e8e7e7;
   width: 80px;
   height: 30px;
 }
-.navLeft {
-  display: block;
-  align-items: center;
+.nav-left nav {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 250px;
+  min-height: 100vh;
+  background-color: #fff;
 }
-.navLeft a {
-  padding: 0 30px;
-  border-right: 2px solid #e8e7e7;
+.nav-left a {
+  display: flex;
+  padding: 10px 30px;
   color: #514a4a;
+  font-size: 1rem;
+}
+.nav-left h1 {
+  display: flex;
+  padding: 10px 30px;
+  color: #b4aeae;
+  font-size: 0.8rem;
 }
 .logo {
-  padding: 0 30px;
+  /* object-fit: contain; */
 }
-.navRight {
+.nav-toggle {
+  display: none;
+}
+.hambuger span {
+  width: 300px;
+  height: 2px;
+  background-color: #6e5959;
+}
+.nav-right {
   display: block;
   align-content: center;
 }
 
-.navRight a {
+.nav-right a {
   color: #514a4a;
   font-weight: 500;
   padding: 0 15px;
+  font-size: 1rem;
 }
 /* ======= */
 .banner {
@@ -53,9 +80,9 @@ a {
   align-content: center;
 }
 .banner img {
-  width: 100%;
+  max-width: 100%;
   height: 310px;
-  background-size: cover;
+  object-fit: cover;
 }
 
 .banner .btn {
@@ -80,43 +107,30 @@ a {
   font-size: 1rem;
 }
 /* ==================== */
-.card {
-  display: grid;
+.cards {
+  display: flex;
+  flex-direction: column;
   background-color: #fff;
+  border-radius: 10px;
   max-width: 75%;
   margin: 0 auto;
-  height: 200px;
-  grid-template-columns: 1fr 2fr 2fr 2fr;
-  grid-template-areas:
-    "btnT btnT btnT btnT"
-    "flight city date people"
-    "btn btn btn btn";
-  gap: 10px;
+  padding: 16px;
+  gap: 24px;
 }
-
-.cardTpoBtn {
-  grid-area: btnT;
-}
-.flight {
-  grid-area: flight;
-}
-.city {
-  grid-area: city;
-}
-.date {
-  grid-area: date;
-}
-.people {
-  grid-area: people;
-}
-.caedBtn {
-  grid-area: btn;
+.cards nav a {
+  display: inline-block;
+  padding: 0 24px;
 }
 
 /* ====================== */
-.qpBtn {
+.qa-btn {
   display: flex;
+  justify-content: space-evenly;
+  margin: 0 auto;
 }
-.qaBtn a {
-  color: #000;
+.qa-btn a {
+  display: inline-block;
+  padding: 16px;
+  line-height: 2.3;
+  gap: 18px;
 }

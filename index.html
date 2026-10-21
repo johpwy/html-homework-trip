@@ -12,62 +12,81 @@
     />
   </head>
   <body>
-    <div class="navBar">
-      <div class="navLeft">
-        <img src="" alt="" class="logo" />
-        <a href="#">出發</a>
-        <a href="#">登機</a>
-        <a href="#">優惠</a>
-        <a href="#">須知</a>
+    <header>
+      <div class="nav-left">
+        <input type="checkbox" id="nav-toggle" class="nav-toggle" />
+        <label for="nav-toggle" class="hambuger">
+          <span>2</span>
+          <span>4</span>
+          <span>3</span>
+        </label>
+        <img src="https://picsum.photos/400/300" class="logo" />
+        <nav>
+          <ul>
+            <li><h1>準備出發</h1></li>
+            <li><a href="#">預定航班</a></li>
+            <li><a href="#">搭乘航班</a></li>
+            <li><h1>歡迎登機</h1></li>
+            <li><a href="#">搭乘本公司</a></li>
+            <li><h1>起飛折扣</h1></li>
+            <li><a href="#">公司優惠</a></li>
+            <li><h1>公司須知</h1></li>
+            <li><a href="#">關於幫助</a></li>
+          </ul>
+        </nav>
       </div>
-      <nav class="navRight">
+      <nav class="nav-right">
         <a href="#">航班搜尋</a>
         <a href="#">登入/註冊</a>
         <a href="#">繁中</a>
         <a href="#">TWD</a>
       </nav>
-    </div>
+    </header>
     <div class="banner">
-      <img src="https://picsum.photos/1024/300" alt="tripgogogo" />
+      <!-- <img src="https://picsum.photos/1024/300" alt="tripgogogo" /> -->
       <div class="btn">
         <button class="left"></button>
         <button class="right"></button>
       </div>
     </div>
-    <div class="card">
-      <div class="cardTopBtn">
+    <div class="cards">
+      <nav>
         <a href="#">航班</a>
         <a href="#">樂虎卡</a>
         <a href="#">虎加酒</a>
         <a href="#">虎里轉</a>
-      </div>
+      </nav>
       <select class="flight" name="flight" id="flight">
         <option value="rt">來回</option>
         <option value="ow">單程</option>
         <option value="oj">不同點</option>
       </select>
       <div class="city">
-        <label for="star">出發地</label>
-        <input type="text" id="star" name="star" />
-        <label for="end">目的地</label>
-        <input type="text" id="end" name="end" />
+        <label for="star"></label>
+        <input type="text" id="star" name="star" value="出發地" />
+        <label for="end"></label>
+        <input type="text" id="end" name="end" value="目的地" />
       </div>
       <div class="date">
-        <label for="starDate">去程出發日期</label>
-        <input type="date" id="starDate" name="starDate" />
-        <label for="endDate">回程出發日期</label>
-        <input type="date" id="endDate" name="endDate" />
+        <div>
+          <label for="starDate">去程出發日期</label>
+          <input type="date" id="starDate" name="starDate" />
+        </div>
+        <div>
+          <label for="endDate">回程出發日期</label>
+          <input type="date" id="endDate" name="endDate" />
+        </div>
       </div>
       <div class="people">
         <label for="people">旅客人數</label>
-        <select name="people" id="people"></select>
+        <select name="people" id="people" name="people"></select>
       </div>
       <div class="cardBtn">
         <button>加入促銷代碼</button>
         <button>搜尋</button>
       </div>
     </div>
-    <div class="qaBtn">
+    <div class="qa-btn">
       <a href="#" class="iconoir-page">管理訂單</a>
       <a href="#" class="iconoir-airplane">自動報到</a>
       <a href="#" class="iconoir-calendar">航班動態</a>
