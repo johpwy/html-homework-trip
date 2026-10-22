@@ -16,9 +16,7 @@
       <div class="nav-left">
         <input type="checkbox" id="nav-toggle" class="nav-toggle" />
         <label for="nav-toggle" class="hambuger">
-          <span>2</span>
-          <span>4</span>
-          <span>3</span>
+          <div class="iconoir-menu"></div>
         </label>
         <img src="https://picsum.photos/400/300" class="logo" />
         <nav>
@@ -36,17 +34,28 @@
         </nav>
       </div>
       <nav class="nav-right">
-        <a href="#">航班搜尋</a>
-        <a href="#">登入/註冊</a>
-        <a href="#">繁中</a>
-        <a href="#">TWD</a>
+        <ul>
+          <li class="iconoir-search">
+            <a href="#">航班搜尋</a>
+          </li>
+          <li class="iconoir-user">
+            <a href="#">登入/註冊</a>
+          </li>
+          <li class="iconoir-globe">
+            <a href="#">繁中</a>
+          </li>
+          <li class="iconoir-dollar-circle">
+            <a href="#">TWD</a>
+          </li>
+        </ul>
       </nav>
     </header>
     <div class="banner">
-      <!-- <img src="https://picsum.photos/1024/300" alt="tripgogogo" /> -->
-      <div class="btn">
-        <button class="left"></button>
-        <button class="right"></button>
+      <div>
+        <div class="btn">
+          <button class="left iconoir-nav-arrow-left"></button>
+          <button class="right iconoir-nav-arrow-right"></button>
+        </div>
       </div>
     </div>
     <div class="cards">
@@ -81,8 +90,8 @@
         <label for="people">旅客人數</label>
         <select name="people" id="people" name="people"></select>
       </div>
-      <div class="cardBtn">
-        <button>加入促銷代碼</button>
+      <div class="card-btn">
+        <button class="iconoir-percent-rotate-out">加入促銷代碼</button>
         <button>搜尋</button>
       </div>
     </div>
