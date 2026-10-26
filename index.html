@@ -18,7 +18,7 @@
         <label for="nav-toggle" class="hambuger">
           <div class="iconoir-menu"></div>
         </label>
-        <img src="https://picsum.photos/400/300" class="logo" />
+        <img src="Catair_logo.svg" class="logo" />
         <nav>
           <ul>
             <li><h1>準備出發</h1></li>
@@ -60,10 +60,22 @@
     </div>
     <div class="cards">
       <nav>
-        <a href="#">航班</a>
-        <a href="#">樂虎卡</a>
-        <a href="#">虎加酒</a>
-        <a href="#">虎里轉</a>
+        <div class="card-top-btn">
+          <div class="iconoir-airplane"></div>
+          <a href="#">航班</a>
+        </div>
+        <div class="card-top-btn">
+          <div class="iconoir-credit-card"></div>
+          <a href="#">貴賓卡</a>
+        </div>
+        <div class="card-top-btn">
+          <img src="Catair_catet.svg" alt="tet" />
+          <a href="#">機加酒</a>
+        </div>
+        <div class="card-top-btn">
+          <img src="Catair_cathop.svg" alt="shop" />
+          <a href="#">錢來轉</a>
+        </div>
       </nav>
       <select class="flight" name="flight" id="flight">
         <option value="rt">來回</option>
@@ -77,19 +89,19 @@
         <input type="text" id="end" name="end" value="目的地" />
       </div>
       <div class="date">
-        <div>
-          <label for="starDate">去程出發日期</label>
+        <label class="star" for="starDate">
+          <p>去程出發日期</p>
           <input type="date" id="starDate" name="starDate" />
-        </div>
-        <div>
-          <label for="endDate">回程出發日期</label>
+        </label>
+        <label class="end" for="endDate">
+          <p>回程出發日期</p>
           <input type="date" id="endDate" name="endDate" />
-        </div>
+        </label>
       </div>
-      <div class="people">
-        <label for="people">旅客人數</label>
+      <label class="people" for="people">
+        <p>旅客人數</p>
         <select name="people" id="people" name="people"></select>
-      </div>
+      </label>
       <div class="card-btn">
         <button class="iconoir-percent-rotate-out">加入促銷代碼</button>
         <button>搜尋</button>

@@ -13,6 +13,7 @@ header {
   background-color: #fff;
   border-bottom: 1px solid #cbcaca;
   display: flex;
+  white-space: nowrap;
   justify-content: space-around;
   align-items: center;
   position: relative;
@@ -22,11 +23,6 @@ header {
 }
 .nav-left {
   display: flex;
-}
-.logo {
-  background-color: #e8e7e7;
-  width: 80px;
-  height: 30px;
 }
 .nav-left nav {
   display: none;
@@ -49,29 +45,43 @@ header {
   color: #b4aeae;
   font-size: 0.8rem;
 }
-.logo {
-  /* object-fit: contain; */
-}
 .nav-toggle {
   display: none;
 }
-.hambuger div {
-  content: "";
-  width: 50px;
-  height: 50px;
-  color: #6e5959;
+.logo {
+  width: 75px;
+  margin: 0 25px;
 }
-.nav-right {
-  display: flex;
-  justify-items: center;
+.hambuger div::before {
+  content: "";
+  width: 28px;
+  height: 28px;
+  color: #b4aeae;
+}
+.nav-toggle:checked ~ nav {
+  display: block;
 }
 
+.nav-right ul {
+  display: flex;
+}
 .nav-right li {
+  display: flex;
+  align-items: center;
+  gap: 8px;
   color: #514a4a;
   font-weight: 500;
-  max-width: 100%;
   padding: 0 15px;
   font-size: 1rem;
+}
+.nav-right li::before {
+  display: block;
+  width: 22px;
+  height: 22px;
+}
+
+.nav-right a {
+  display: none;
 }
 
 /* ======= */
@@ -102,7 +112,7 @@ header {
   border: none;
   border-radius: 99%;
   display: block;
-  background-color: rgba(255, 255, 255, 0.2);
+  background-color: rgba(255, 255, 255, 0.4);
 }
 .left::before {
   content: "";
@@ -122,16 +132,83 @@ header {
   flex-direction: column;
   background-color: #fff;
   border-radius: 10px;
-  max-width: 75%;
+  max-width: 95%;
   margin: 0 auto;
-  padding: 12px;
-  gap: 24px;
+  padding: 24px;
+  gap: 16px;
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.2);
 }
 .cards section,
 .cards div {
-  padding: 0, 12px;
+  padding: 0, 6px;
+}
+.cards nav {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid #e8e7e7;
+}
+.card-top-btn a {
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: #b4aeae;
 }
 
+.card-top-btn img {
+  width: 40px;
+  padding-right: 4px;
+}
+
+/* .card-top-btn:nth-of-type(3),
+.card-top-btn:nth-of-type(4) {
+} */
+
+.city {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+}
+
+#flight,
+.star,
+#star,
+.end,
+#end,
+.people {
+  border: 1px solid #cbcaca;
+  height: 50px;
+  border-radius: 4px;
+  padding: 9px;
+  font-size: 0.9rem;
+}
+
+#flight:hover,
+.star:hover,
+#star:hover,
+.end:hover,
+#end:hover,
+.people:hover {
+  border: 1px solid #eba626;
+}
+
+#star,
+#end {
+  width: 100%;
+}
+.star,
+.end,
+.people {
+  display: flex;
+  align-items: center;
+}
+
+#starDate,
+#endDate,
+#people {
+  border: none;
+  width: 90%;
+}
 .card-btn {
   display: flex;
   justify-content: space-between;
@@ -159,11 +236,14 @@ header {
 }
 
 .card-btn :nth-of-type(2) {
-  background-color: #514a4a;
+  background-color: #eba626;
   width: 90px;
   height: 40px;
   border-radius: 4px;
   color: #fff;
+}
+.card-btn :nth-of-type(2):hover {
+  background-color: #efcd8f;
 }
 
 /* ====================== */
@@ -188,4 +268,22 @@ header {
   display: block;
   justify-self: center;
   color: #6e5959;
+}
+
+/* ========================== */
+@media (min-width: 768px) {
+  .hambuger {
+    display: none;
+  }
+  .nav-left nav {
+    display: block;
+    padding: static;
+    width: auto;
+  }
+  .nav-left nav h1 {
+    display: none;
+  }
+  .nav-left ul {
+    display: flex;
+  }
 }
